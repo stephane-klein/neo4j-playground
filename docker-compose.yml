@@ -1,0 +1,16 @@
+services:
+  neo4j:
+    image: neo4j:5.18.1
+    restart: unless-stopped
+    environment:
+      NEO4J_AUTH: "neo4j/password"
+    ports:
+      - 7474:7474
+      - 7687:7687
+    volumes:
+      - ./volumes/neo4j/:/data/
+    healthcheck:
+      test: [ "CMD", "/var/lib/neo4j/bin/cypher-shell", "-u", "neo4j", "-p", "password", "MATCH () RETURN count(*) as count" ]
+      interval: 10s
+      timeout: 10s
+      retries: 20
