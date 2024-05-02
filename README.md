@@ -60,4 +60,4 @@ I've been using databases for 25 years and this is the first time I've tested a 
 
 I feel like I've missed out on something very practical.
 
-Now that I've succeeded with this Neo4j POC, I'm going to try and do the same thing with [Apache Age](https://github.com/apache/age), which is based on PostgreSQL.
+Having successfully implemented this POC based on Neo4j, I've implemented the same thing [here](https://github.com/stephane-klein/apache-age-playground) based on the PostgreSQL extension named [Apache Age](https://github.com/apache/age). 
